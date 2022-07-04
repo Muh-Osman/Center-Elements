@@ -1,0 +1,128 @@
+.parent {
+    position: relative;
+    box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.parent::before,
+.parent::after {
+    content: '';
+    position: absolute;
+    background-color: #cbcbcb;
+}
+
+.parent::before {
+    left: 49.5%;
+    width: .5%;
+    height: 100%;
+}
+
+.parent::after {
+    top: 49%;
+    height: 1%;
+    width: 100%;
+}
+
+.child {
+    z-index: 1;
+}
+
+
+
+/* Method One */
+
+.parent {
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    display: grid;
+    place-items: center;
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: #16e280;
+}
+
+
+
+/* Method Two */
+
+/* .parent {
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: #16e280;
+} */
+
+
+
+/* Method Three */
+
+/* .parent {
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    position: relative;
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: #16e280;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+
+
+/* Method Four */
+
+/* .parent {
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    position: relative;
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: #16e280;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+} */
+
+
+
+
+/* Method Five */
+
+/* .parent {
+    width: 600px;
+    height: 300px;
+    background-color: #eee;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+.child {
+    width: 200px;
+    height: 100px;
+    background-color: #16e280;
+    margin: auto;
+} */
